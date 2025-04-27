@@ -1,0 +1,176 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Liên hệ - Omin Cuelees</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-container {
+            max-width: 500px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            padding: 32px 32px 24px 32px;
+            margin: 40px auto 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        .contact-container h2 {
+            margin-top: 0;
+            font-size: 2rem;
+            color: #222;
+            font-weight: bold;
+        }
+        .contact-info {
+            margin-bottom: 18px;
+        }
+        .contact-info div {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+        }
+        .contact-info i {
+            color: #b91c1c;
+            margin-right: 10px;
+            font-size: 1.2rem;
+            width: 22px;
+            text-align: center;
+        }
+        .contact-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        .contact-form input[type="text"], .contact-form input[type="email"] {
+            width: 48%;
+        }
+        .contact-form input[type="text"]:nth-child(1) {
+            margin-right: 4%;
+        }
+        .contact-form textarea {
+            min-height: 60px;
+            resize: vertical;
+        }
+        .contact-form button {
+            background: #a10000;
+            color: #fff;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-top: 8px;
+            transition: background 0.2s;
+        }
+        .contact-form button:hover {
+            background: #d32f2f;
+        }
+        .map-section {
+            width: 100vw;
+            min-height: 420px;
+            margin-top: 30px;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
+        @media (max-width: 700px) {
+            .contact-container {
+                max-width: 98vw;
+                padding: 16px 4vw 12px 4vw;
+            }
+            .contact-form input[type="text"], .contact-form input[type="email"] {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+    </style>
+    <!-- Font Awesome cho icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-flex">
+            <img src="images/logo.png" alt="Logo" class="header-logo">
+            <nav>
+                <a href="index.html">TRANG CHỦ</a>
+                <a href="products.html">SẢN PHẨM</a>
+                <a href="contact.html" class="active">LIÊN HỆ</a>
+            </nav>
+        </div>
+    </header>
+    <div class="contact-container">
+        <h2>LIÊN HỆ</h2>
+        <div class="contact-info">
+            <div><i class="fas fa-map-marker-alt"></i> TT5.1.5 KĐT Mới Đại Kim- Đại Kim- Hoàng Mai- Hà Nội</div>
+            <div><i class="fas fa-phone"></i> Hotline: 0836204777</div>
+            <div><i class="fas fa-envelope"></i> Email: xbillardvn@gmail.com</div>
+        </div>
+        <form class="contact-form" id="contactForm">
+            <input type="text" placeholder="Họ tên" required>
+            <input type="text" placeholder="Điện thoại" required>
+            <input type="email" placeholder="Email" required style="width:100%;">
+            <textarea placeholder="Nhập văn bản" required></textarea>
+            <button type="submit">GỬI ĐI</button>
+        </form>
+        <div id="form-success" style="color:green;font-weight:bold;margin-top:10px;display:none;">Đã gửi thành công</div>
+    </div>
+    <div class="map-section">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.455221677299!2d105.8252032148837!3d20.97885838602796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad0b2e2e2e2f%3A0x2e2e2e2e2e2e2e2e!2zVFRNNS4xLjUgS-G7syBUw6J5IE3hu5ljIMSQ4bqhaSBLaW0!5e0!3m2!1svi!2s!4v1680000000000!5m2!1svi!2s"
+            width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    <footer class="footer-modern">
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="images/logo.png" alt="Logo" style="height:48px;margin-bottom:10px;">
+                <h3>OMIN - CUELEES</h3>
+                <p>Phân phối chính hãng Omin - Cuelees tại Việt Nam.</p>
+                <p>Hotline: 0966.389.389</p>
+            </div>
+            <div class="footer-col">
+                <h4>MENU</h4>
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="products.html">Sản Phẩm</a></li>
+                    <li><a href="contact.html" class="active">Liên Hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>NHẬN THÔNG TIN TỪ CHÚNG TÔI</h4>
+                <form class="footer-form">
+                    <input type="text" placeholder="Fanpage">
+                    <button type="submit">&#8594;</button>
+                </form>
+                <div class="footer-social">
+                    <a href="#"><img src="images/facebook.png" alt="Facebook" /></a>
+                    <a href="#"><img src="images/instagram.png" alt="Instagram" /></a>
+                    <a href="#"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <hr>
+            <p>&copy; Copyright ©2024 All Rights Reserved | This Template Is Made With By Omin - Cuelees VN.</p>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('form-success').style.display = 'block';
+    this.reset();
+});
+</script>

@@ -1,0 +1,313 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+header {
+    background: #000;
+    color: #fff;
+    padding: 0;
+}
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+.header-logo {
+    height: 48px;
+    margin-left: 12px;
+}
+nav {
+    display: flex;
+    gap: 38px;
+    margin-right: 24px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.08rem;
+    padding: 2px 0;
+    letter-spacing: 1px;
+    transition: color 0.2s, border-bottom 0.2s;
+    border-bottom: 2px solid transparent;
+}
+nav a:hover, nav a.active {
+    color: #2563eb;
+    border-bottom: 2px solid #2563eb;
+    background: none;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    flex: 1;
+}
+nav {
+    float: none;
+    display: flex;
+    gap: 28px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.08rem;
+    padding: 2px 0;
+    transition: color 0.2s;
+}
+nav a:hover, nav a.active {
+    color: #3b82f6;
+    border-bottom: 2px solid #3b82f6;
+}
+.banner {
+    position: relative;
+    margin-top: -2px; /* Cho banner lùi xuống một chút */
+    margin-bottom: 60px;
+}
+.banner-image {
+    width: 100%;
+    height: 650px; /* hoặc đúng chiều cao tỷ lệ ảnh banner */
+    background: url('images/banner.jpg') center center/contain no-repeat;
+    position: relative;
+}
+.banner-logo {
+    position: absolute;
+    top: 32px;
+    left: 48px;
+    height: 60px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 8px;
+    padding: 8px 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.banner-intro {
+    position: absolute;
+    left: 50%;
+    top: 500px; /* Điều chỉnh để ô nổi nằm trên banner */
+    transform: translateX(-50%);
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    padding: 32px 40px;
+    max-width: 900px;
+    width: 90%;
+    z-index: 2;
+}
+.banner-intro h2 {
+    margin: 0 0 12px 0;
+    font-size: 2.2rem;
+    color: #5a6a8e;
+    font-weight: bold;
+}
+.banner-intro p {
+    margin: 0;
+    color: #444;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+.banner {
+    position: relative;
+    margin-bottom: 60px;
+}
+@media (max-width: 900px) {
+    .banner-image {
+        height: 260px;
+    }
+    .banner-logo {
+        top: 12px;
+        left: 12px;
+        height: 40px;
+        padding: 4px 8px;
+    }
+    .banner-intro {
+        top: 160px;
+        padding: 18px 10px;
+    }
+    .banner-intro h2 {
+        font-size: 1.3rem;
+    }
+    .banner-intro p {
+        font-size: 0.95rem;
+    }
+}
+.banner h2 {
+    margin: 0 0 10px 0;
+    font-size: 2.5rem;
+}
+.products {
+    padding: 40px 0;
+}
+.products h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 28px 24px 24px 24px;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 40px;
+    transition: box-shadow 0.2s;
+}
+.product-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+.product-card img {
+    width: 100%;
+    height: 180px; /* Đặt chiều cao cố định cho ảnh */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+.product-card h3 {
+    margin: 18px 0 12px 0;
+    font-size: 1.15rem;
+    color: #333;
+    font-weight: 500;
+    font-family: 'Montserrat', Arial, sans-serif;
+    text-decoration: none;
+}
+.product-card h3 a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+.product-card h3 a:hover {
+    color: #222;
+    text-decoration: underline;
+}
+.product-card p {
+    color: #222;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 18px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+.product-card button {
+    background: #222;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+.product-card button:hover {
+    background: #e53935;
+}
+html, body {
+    height: 100%;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+footer {
+    margin-top: auto;
+}
+footer {
+    background: #292c47;
+    color: #fff;
+    padding: 40px 0 0 0;
+    font-size: 15px;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+.footer-col {
+    flex: 1 1 250px;
+    margin: 10px 20px;
+}
+.footer-col h3, .footer-col h4 {
+    margin-top: 0;
+    letter-spacing: 2px;
+}
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+.footer-col ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.footer-col ul li a:hover {
+    color: #ffd700;
+}
+.footer-form {
+    display: flex;
+    margin-top: 10px;
+}
+.footer-form input {
+    flex: 1;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+.footer-form button {
+    padding: 6px 12px;
+    border: none;
+    background: #44476a;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+.footer-social {
+    margin-top: 12px;
+}
+.footer-social a img {
+    width: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 18px 0 10px 0;
+    font-size: 14px;
+    color: #ccc;
+}
+.footer-bottom hr {
+    border: none;
+    border-top: 1px solid #44476a;
+    margin-bottom: 10px;
+}
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-col {
+        margin: 20px 0;
+    }
+}

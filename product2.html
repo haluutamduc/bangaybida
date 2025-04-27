@@ -1,0 +1,152 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Gậy Bida 1 - Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .product-detail-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            margin: 40px auto;
+            max-width: 1100px;
+        }
+        .slider {
+            width: 500px;
+            position: relative;
+        }
+        .slider img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: none;
+        }
+        .slider img.active {
+            display: block;
+        }
+        .slider-dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .slider-dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            margin: 0 4px;
+            cursor: pointer;
+        }
+        .slider-dot.active {
+            background: #222;
+        }
+        .product-info {
+            max-width: 500px;
+        }
+        .product-info h2 {
+            margin-top: 0;
+        }
+        .product-info .price {
+            color: #e53935;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-flex">
+            <img src="images/logo.png" alt="Logo" class="header-logo">
+            <nav>
+                <a href="index.html" class="active">TRANG CHỦ</a>
+                <a href="products.html">SẢN PHẨM</a>
+                <a href="contact.html">LIÊN HỆ</a>
+            </nav>
+        </div>
+    </header>
+    <div class="product-detail-container">
+        <div class="slider" id="slider">
+            <img src="../images/product2-1.jpg.jpg" alt="Gậy - Cơ Carefree 1 - Hình 1" class="active">
+            <img src="../images/product2-2.jpg.jpg" alt="Gậy - Cơ Carefree 1 - Hình 2">
+            <img src="../images/product2-3.jpg.jpg" alt="Gậy - Cơ Carefree 1 - Hình 3">
+            <img src="../images/product2-4.jpg.jpg" alt="Gậy - Cơ Carefree 1 - Hình 4">
+            <div class="slider-dots" id="slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+            </div>
+        </div>
+        <div class="product-info">
+            <h2>Gậy - Cơ Carefree 2</h2>
+            <div class="price">Giá:  47.500.000 đ</div>
+            <ul>
+                <li>[Mẫu]: LS-A03</li>
+                <li>[Chiều dài]: 58 inch</li>
+                <li>[Cẳng tay]: Rồng vảy juma và gỗ mun</li>
+                <li>[Lớp phủ ]: Elforyn của Đức, vỏ bào ngư, dây chuyền hợp kim bạc</li>
+                <li>[Đầu cán tay]: Rồng vảy juma và gỗ mun</li>
+                <li>[Trục]: 4 lựa chọn, Solid, CT, CT2, 12MAX</li>
+                <li>[Ring/vòng tròn]:Vỏ bào ngư và hợp kim bạc</li>
+                <li>[Đầu nối]: Chốt xuyên tâm</li>
+                <li>[Chuôi ,cán]: Bọc da balck chính hãng</li>
+                <li>[Bộ bảo vệ đầu nối]:Padouk có in logo Cuelees ở phía trên</li>
+            </ul>
+        </div>
+    </div>
+    <footer class="footer-modern">
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="../images/logo.png" alt="Logo" style="height:48px;margin-bottom:10px;">
+                <h3>OMIN - CUELEES</h3>
+                <p>Phân phối chính hãng Omin - Cuelees tại Việt Nam.</p>
+                <p>Hotline: 0966.389.389</p>
+            </div>
+            <div class="footer-col">
+                <h4>MENU</h4>
+                <ul>
+                    <li><a href="../index.html">Trang Chủ</a></li>
+                    <li><a href="#">Sản Phẩm</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>NHẬN THÔNG TIN TỪ CHÚNG TÔI</h4>
+                <form class="footer-form">
+                    <input type="text" placeholder="Fanpage">
+                    <button type="submit">&#8594;</button>
+                </form>
+                <div class="footer-social">
+                    <a href="#"><img src="../images/facebook.png" alt="Facebook" /></a>
+                    <a href="#"><img src="../images/instagram.png" alt="Instagram" /></a>
+                    <a href="#"><img src="../images/linkedin.png" alt="LinkedIn" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <hr>
+            <p>&copy; Copyright ©2024 All Rights Reserved | This Template Is Made With By Omin - Cuelees VN.</p>
+        </div>
+    </footer>
+    <script>
+        // Slider tự động chuyển ảnh
+        const images = document.querySelectorAll('#slider img');
+        const dots = document.querySelectorAll('#slider-dots .slider-dot');
+        let current = 0;
+        function showSlide(index) {
+            images.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+                dots[i].classList.toggle('active', i === index);
+            });
+            current = index;
+        }
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => showSlide(i));
+        });
+        setInterval(() => {
+            let next = (current + 1) % images.length;
+            showSlide(next);
+        }, 2500);
+    </script>
+</body>
+</html>
